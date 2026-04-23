@@ -1,0 +1,11 @@
+{
+  "name": "transfer-vs-card",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "test": "node --test tests/calc.test.ts",
+    "dev": "npm run build -- --watch"
+  }
+}
