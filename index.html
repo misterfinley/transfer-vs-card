@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer vs Card</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <div class="header-row">
+          <h1>Transfer vs Card Cost Estimator</h1>
+          <span id="mode-badge">Loading…</span>
+        </div>
+
+        <p>Quickly compare total USD cost and recipient EUR value.</p>
+
+        <div class="controls">
+          <input id="amount" type="number" min="0" step="10" value="500" aria-label="Amount in USD" />
+          <button id="refresh" type="button">Refresh rates</button>
+        </div>
+
+        <div class="grid">
+          <article class="panel">
+            <h2>Bank transfer</h2>
+            <div id="transfer-cost" class="amount">—</div>
+            <div id="transfer-gets" class="small">—</div>
+          </article>
+          <article class="panel">
+            <h2>Card payment</h2>
+            <div id="card-cost" class="amount">—</div>
+            <div id="card-gets" class="small">—</div>
+          </article>
+        </div>
+
+        <p id="winner"></p>
+      </section>
+    </main>
+
+    <script type="module" src="./dist/src/main.js"></script>
+  </body>
+</html>
